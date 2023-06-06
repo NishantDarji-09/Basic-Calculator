@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script src="assets/js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+    <h2 class="welcomeMessage">Welcome to the Basic Calculator</h2>
+    <p id="paragraph">Here You can calculate me!</p>
+    <div class="calculatorContainer">
+      <div class="displayAns">
+        <input type="text" name="display" id="displayAns" onpaste="validatePaste(event)" />
+      </div>
+      <hr />
+      <div class="rowContainer">
+        <div class="row">
+          <input
+            type="button"
+            value="C"
+            id="calculatorButtonClear"
+          />
+          <input
+            type="button"
+            id="calculatorBackspace"
+            value="⌫"
+            name = "backspace"
+            onclick="backspace()"
+          />
+          <input
+            type="button"
+            id="calculatorOperator"
+            value="%"
+            onclick="displayNumber('%')"
+          />
+          <input
+            type="button"
+            id="calculatorOperator"
+            value="/"
+            onclick="displayNumber('/')"
+          />
+        </div>
+        <div class="row">
+          <input
+            type="button"
+            id="calculatorButton"
+            value="7"
+            onclick="displayNumber('7')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="8"
+            onclick="displayNumber('8')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="9"
+            onclick="displayNumber('9')"
+          />
+          <input
+            type="button"
+            id="calculatorOperator"
+            value="*"
+            onclick="displayNumber('*')"
+          />
+        </div>
+        <div class="row">
+          <input
+            type="button"
+            id="calculatorButton"
+            value="4"
+            onclick="displayNumber('4')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="5"
+            onclick="displayNumber('5')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="6"
+            onclick="displayNumber('6')"
+          />
+          <input
+            type="button"
+            id="calculatorOperator"
+            value="-"
+            onclick="displayNumber('-')"
+          />
+        </div>
+        <div class="row">
+          <input
+            type="button"
+            id="calculatorButton"
+            value="1"
+            onclick="displayNumber('1')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="2"
+            onclick="displayNumber('2')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="3"
+            onclick="displayNumber('3')"
+          />
+          <input
+            type="button"
+            id="calculatorOperator"
+            value="+"
+            onclick="displayNumber('+')"
+          />
+        </div>
+        <div class="row">
+          <input
+            type="button"
+            id="displayNumber"
+            value="00"
+            onclick="displayNumber('00')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="0"
+            onclick="displayNumber('0')"
+          />
+          <input
+            type="button"
+            id="calculatorButton"
+            value="."
+            onclick="displayNumber('.')"
+          />
+          <input
+            type="button"
+            id="calculatorEqual"
+            value="="
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
